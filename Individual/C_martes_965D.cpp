@@ -1,7 +1,11 @@
 #include <iostream>
-#include <string>
 #include <vector>
+
+#define MIN(a,b) (((a)<(b))?(a):(b))
+#define MAX(a,b) (((a)>(b))?(a):(b))
+
 using namespace std;
+
 
 void solution (int width, int maxJump, vector<int>rocks){
     int sum = 0;
@@ -13,7 +17,7 @@ void solution (int width, int maxJump, vector<int>rocks){
 
     for (int i = maxJump; i < width - 1; i++) {
         sum = sum - rocks[i - maxJump] + rocks[i];
-        maxFrogs = min(maxFrogs, sum);
+        maxFrogs = MIN(maxFrogs, sum);
     }
 
     cout << maxFrogs;
