@@ -6,7 +6,7 @@ using namespace std;
 bool redFlag = false;
 int movementsX[4]={1,-1,0,0};
 int movementsY[4]={0,0,-1,1};
-
+D - mierocles
 void dfs(int x, int y, int R, int C, vector<vector<char>> &pasture){
   int nx, ny, a;
 
